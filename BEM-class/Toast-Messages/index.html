@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Messages</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="toast"></div>
+
+    <div>
+        <div class="btn btn--success">Show Success Toast Message</div>
+        <div class="btn btn--warning">Show Warning Toast Message</div>
+    </div>
+
+    <script>
+        function toast({ title, msg, type = 'success', duration = 3000 }) {
+            const main = document.getElementById('toast');
+            if (main) {
+                const icons = {
+                    success: 'fas fa-check-circle',
+                    warning: 'fas fa-exclamation-circle'
+                };
+                const toastMessage = document.createElement('div');
+                toastMessage.classList.add('toast', `toast--${type}`);
+                toastMessage.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${(duration / 1000).toFixed(2)}s forwards`;
+                toastMessage.innerHTML = `
+                    <div class="toast__icon">
+                        <i class="${icons[type]}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h3 class="toast__title">${title}</h3>
+                        <p class="toast__msg">${msg}</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fas fa-times"></i>
+                    </div>`;
+
+                //auto remove toast
+                const autoRemoveId = setTimeout(() => {
+                    main.removeChild(toastMessage);
+                }, duration + 1000);
+
+
+                //remove toast when clicked
+                toastMessage.addEventListener('click', function (e) {
+                    if (e.target.closest('.toast__close')) {
+                        main.removeChild(toastMessage);
+                        clearTimeout(autoRemoveId);
+                    }
+                });
+
+                main.appendChild(toastMessage);
+            }
+        }
+
+        const btnSuccess = document.querySelector('.btn--success');
+        const btnWarning = document.querySelector('.btn--warning');
+
+        btnSuccess.addEventListener('click', () => {
+            toast({
+                title: 'Success',
+                msg: 'Your message has been sent successfully.',
+            })
+        });
+
+        btnWarning.addEventListener('click', () => {
+            toast({
+                title: 'Warning',
+                msg: 'Any one with access can view your invited visitors.',
+                type: 'warning'
+            })
+        });
+    </script>
+</body>
+
+</html>
