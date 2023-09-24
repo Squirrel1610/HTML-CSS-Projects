@@ -128,3 +128,133 @@
 .header__navbar-item--has-qr:hover .header__qr {
     display: block;
 }
+
+/* Header Notification */
+.header__notify {
+    width: 404px;
+    position: absolute;
+    top: calc(100% + 4px);
+    background-color: var(--white-color);
+    right: 0;
+    border: 1px solid #D3D3D3;
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrowth ease-in .2s;
+    display: none;
+}
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 150px;
+    right: 0;
+    top: -20px;
+    height: 20px;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify-heading {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-heading h3 {
+    margin: 0 0 0 12px;
+    color: #999;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    line-height: 40px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.header__notify-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.header__notify-item {
+    background-color: rgba(238, 75, 43, 0.08);
+}
+
+.header__notify-item:hover {
+    background-color: #F7F7F7;
+}
+
+.header__notify-item--viewed {
+    background-color: #F1F1F1;
+}
+
+.header__notify-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.header__notify-img {
+    width: 50px;
+    object-fit: cover;
+}
+
+.header__notify-info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 4px;
+    line-height: 1.8rem;
+}
+
+.header__notify-desc {
+    display: block;
+    font-size: 1.2rem;
+    color: #756F6E;
+    line-height: 1.6rem;
+}
+
+.header__notify-footer {
+    display: flex;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 32px;
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
