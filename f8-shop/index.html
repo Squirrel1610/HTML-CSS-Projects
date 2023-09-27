@@ -284,8 +284,77 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row app__content">
+                    <!-- Category -->
+                    <div class="grid__col-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fas fa-list"></i>
+                                Danh Mục
+                            </h3>
             
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">Đồng hồ nam</a>
+                                </li>
+            
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ nữ</a>
+                                </li>
+            
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ cặp</a>
+                                </li>
+            
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Phụ kiện đồng hồ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <!-- List Product -->
+                    <div class="grid__col-10">
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+                            
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                                    </li>
+
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Cao đến thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter-pagination">
+                                <span class="home-filter-pagination-num">
+                                    <span class="home-filter-pagination-num-current">1</span>/14
+                                </span>
+
+                                <div class="home-filter-pagination-control">
+                                    <a href="" class="home-filter-pagination-control-btn home-filter-pagination-control-btn--disable">
+                                        <i class="home-filter-pagination-control-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter-pagination-control-btn">
+                                        <i class="home-filter-pagination-control-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="footer">
