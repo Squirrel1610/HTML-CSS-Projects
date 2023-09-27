@@ -30,7 +30,7 @@
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--seperate">
-                            Vào cửa hàng trên ứng dụng F8-Shop
+                            Vào cửa hàng trên ứng dụng Shopee ngay
                             <div class="header__qr">
                                 <img src="./assets/img/qr-code-shoppee.png" class="header__qr-img" alt="QR code">
                                 <div class="header__qr-apps">
@@ -159,8 +159,24 @@
                             </g>
                          </svg>
                     </div>
+
                     <div class="header__search">
-                        <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-list-item">
+                                        <a href="">Áo khoác nam</a>
+                                    </li>
+                                    <li class="header__search-history-list-item">
+                                        <a href="">Giày bitis</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div class="header__search-select">
                             <span class="header__search-select-label">
                                 Trong shop
@@ -183,8 +199,59 @@
                             <i class="header__search-btn-icon fas fa-search"></i>
                         </button>
                     </div>
+
                     <div class="header__cart">
-                        <i class="header__cart-icon fas fa-shopping-cart"></i>
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">3</span>
+
+                            <!-- No cart: header__cart-list--no-item -->
+                            <div class="header__cart-list">
+                                <h3 class="header__cart-heading">Sản phẩm đã thêm</h3>
+                                <ul class="header__cart-list-items">
+                                    <li class="header__cart-list-item">
+                                        <img src="https://down-vn.img.susercontent.com/file/f0805502f3f8d9218cda16331311e5d1" alt="Image of product" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Đồng hồ thể thao Casio</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">1.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Đen</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__cart-list-item">
+                                        <img src="https://down-vn.img.susercontent.com/file/f0805502f3f8d9218cda16331311e5d1" alt="Image of product" class="header__cart-item-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Đồng hồ thể thao Casio</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">1.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">Phân loại: Đen</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button href="" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</button>
+
+                                <img src="./assets/img/cart-no-item.png" class="header__cart-no-cart-img" c alt="Cart no item">
+                                <span class="header__cart-list-no-item-msg">Chưa có sản phẩm</span>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
