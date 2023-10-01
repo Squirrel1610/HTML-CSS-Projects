@@ -62,6 +62,12 @@ html {
     padding-right: 5px;
 }
 
+.grid__col-12 {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 /* Animation */
 
  /* Hiện dần lên */
