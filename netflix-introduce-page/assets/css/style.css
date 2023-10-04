@@ -346,6 +346,8 @@ div.question.active div.answer {
     margin-top: 32px;
 }
 
+/* App Footer */
+
 .app__footer {
     padding: 72px 176px;
     background-color: #000;
@@ -354,6 +356,28 @@ div.question.active div.answer {
     justify-content: space-between;
     align-items: center;
 }
+
+.footer__list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer__item {
+    margin-bottom: 16px;
+}
+
+.footer__item a {
+    font-size: 1.4rem;
+    color: #b1acac;
+    font-weight: 500;
+}
+
+.footer__item p {
+    font-size: 1.4rem;
+    color: #b1acac;
+    font-weight: 500;
+}
+
 
 
 
