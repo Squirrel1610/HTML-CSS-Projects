@@ -1,0 +1,279 @@
+/* Navbar */
+.navbar__brand-logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar__right-item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar__left-list {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 28px;
+}
+
+.navbar__left-item {
+  margin-right: 24px;
+}
+
+.navbar__left-item-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.navbar__left-item-link:hover {
+  color: var(--color-primary);
+}
+
+.navbar__right-list {
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.navbar__right-item {
+    margin-left: 16px;
+}
+
+.navbar__right-item:nth-child(2) {
+    margin-left: 40px;
+}
+
+.navbar__right-item-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar__right-item-link span {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.navbar__right-item-link:hover {
+  color: var(--color-primary);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 50px;
+  padding: 7px 16px;
+  line-height: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.btn-dark-outline {
+  border-color: #000;
+  color: #000;
+}
+
+.btn-dark-outline:hover,
+.btn-light-outline:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.btn-light-outline {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #333;
+}
+
+/* Backgrounds */
+.bg-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.bg-extra {
+  background-color: var(--color-extra);
+  color: #000;
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+  color: #000;
+}
+
+/* Text Styling */
+.text-center {
+  text-align: center;
+}
+
+.text-xl {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 5rem;
+}
+
+.text-lg {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 4rem;
+}
+
+.text-md {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  line-height: 2.4rem;
+}
+
+.text-sm {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  line-height: 1.9rem;
+}
+
+/* Padding */
+.py-sm {
+  padding: 10px 0;
+}
+.py-md {
+  padding: 20px 0;
+}
+.py-lg {
+  padding: 40px 0;
+}
+
+/* Box */
+.box {
+    margin-bottom: 30px;
+}
+
+.box-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.box-text {
+  max-width: 500px;
+  text-align: center;
+  justify-self: center;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.box-text .btn {
+  margin-top: 20px;
+}
+
+.box-f .box-text {
+  max-width: 600px;
+}
+
+/* Grid */
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-reversed :first-child {
+  order: 2;
+}
+
+/* Footer */
+.divider {
+  width: 95%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px auto;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.social img {
+  width: 35px;
+  height: 35px;
+}
+
+.social a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .text-xl {
+        font-size: 3rem;
+    }
+
+    .text-lg {
+        font-size: 2.5rem;
+    }
+
+    .text-md {
+        font-size: 1.9rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .box {
+        max-width: 1280px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .divider {
+      max-width: 90%;
+    }
+}

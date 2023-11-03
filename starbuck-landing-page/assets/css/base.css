@@ -1,0 +1,41 @@
+:root {
+    --color-primary: #006241;
+    --color-secondary: #d50032;
+    --color-extra: #d4e9e2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5% ; /* 1rem = 10px */
+    line-height: 1.6rem; /* 16px */
+    color: #000;
+}
+
+a {
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+p {
+    margin: 5px 0;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+section a {
+    color: #fff;
+}
+
