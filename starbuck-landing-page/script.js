@@ -1,7 +1,10 @@
-const btn = document.getElementById('menu-btn');
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenuNav = document.getElementById('menu');
 
 function toggleMenu() {
-  btn.classList.toggle('open');
+  menuBtn.classList.toggle('open');
+  mobileMenuNav.classList.toggle('hidden');
+  document.body.classList.toggle('no-scroll');
 }
 
-btn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener('click', toggleMenu);
